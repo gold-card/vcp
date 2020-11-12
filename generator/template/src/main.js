@@ -1,25 +1,22 @@
 const requestPluginOptions = {
   baseParams: {
-    baseUrl: '',
+    baseUrl: "",
   },
   headers: {},
-}
+};
 
 export default {
-  title: '网站标题',
+  title: "网站标题",
 
   created() {
     // 应用创建完成后的回调
   },
 
-  plugins: [
-    // 对内置的request插件进行配置
-    ['request', requestPluginOptions],
-  ],
+  plugins: ["request", requestPluginOptions],
 
   router: {
     // vue-router 配置对象
-    mode: 'hash',
+    mode: "hash",
     created(/*router*/) {
       // 路由器创建完成后的回调
     },
@@ -31,4 +28,4 @@ export default {
       // Store创建完成后的回调
     },
   },
-}
+};

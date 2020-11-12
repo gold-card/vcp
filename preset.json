@@ -1,15 +1,11 @@
 {
   "useConfigFiles": true,
   "cssPreprocessor": "less",
-  "vuex": true,
-  "router": true,
+  "routerHistoryMode": false,
 
   "plugins": {
-    "@vue/cli-plugin-babel": {
-      "version": "^4.5.8"
-    },
+    "@vue/cli-plugin-babel": {},
     "@vue/cli-plugin-eslint": {
-      "version": "^4.5.8",
       "config": "prettier",
       "lintOn": ["save", "commit"]
     }

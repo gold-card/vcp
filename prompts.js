@@ -21,6 +21,6 @@ module.exports = [
     name: "echarts",
     type: "confirm",
     message: `Install Echarts ?`,
-    default: false,
+    default: true,
   },
 ];

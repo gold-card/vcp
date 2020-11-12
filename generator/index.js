@@ -14,6 +14,7 @@ module.exports = (api, opts, rootOpts) => {
   api.extendPackage({
     devDependencies: {
       "vue-cli-plugin-ice-builder": "^0.5.0",
+      "icefox": "^1.2.6",
     },
   });
 
