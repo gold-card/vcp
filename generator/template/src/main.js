@@ -1,31 +1,10 @@
-const requestPluginOptions = {
-  baseParams: {
-    baseUrl: "",
-  },
-  headers: {},
-};
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
-export default {
-  title: "网站标题",
-
-  created() {
-    // 应用创建完成后的回调
-  },
-
-  plugins: ["request", requestPluginOptions],
-
-  router: {
-    // vue-router 配置对象
-    mode: "hash",
-    created(/*router*/) {
-      // 路由器创建完成后的回调
-    },
-  },
-
-  store: {
-    // Vuex Store 配置对象
-    created(/*store*/) {
-      // Store创建完成后的回调
-    },
-  },
-};
+new Vue({
+  router,
+  store,
+  render: (h) => h(App),
+}).$mount('#app')

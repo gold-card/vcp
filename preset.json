@@ -9,11 +9,5 @@
       "config": "prettier",
       "lintOn": ["save", "commit"]
     }
-  },
-
-  "configs": {
-    "postcss": {
-      "plugins": {}
-    }
   }
 }
