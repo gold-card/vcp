@@ -5,6 +5,7 @@ module.exports = (api, opts, rootOpts) => {
       serve: 'vue-cli-service serve',
       build: 'vue-cli-service build --silent',
       lint: 'vue-cli-service lint',
+      test: 'vue-cli-service test',
       stage: 'vue-cli-service stage',
       deploy: 'vue-cli-service deploy',
     },
@@ -12,7 +13,9 @@ module.exports = (api, opts, rootOpts) => {
 
   // 开发依赖包
   api.extendPackage({
-    devDependencies: {},
+    devDependencies: {
+      '@vue/test-utils': '^1.0.3',
+    },
   })
 
   // 项目依赖
