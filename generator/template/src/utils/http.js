@@ -6,7 +6,7 @@ const http = axios.create({
 })
 
 http.interceptors.request.use(
-  // FEAT: 设置token示例
+  // 设置token示例
   (config) => {
     if (localStorage.token) {
       config.headers.Authorization = 'Bearer' + localStorage.token
@@ -23,12 +23,12 @@ http.interceptors.response.use(
     return res
   },
   (err) => {
-    // FEAT: 请求报错示例
+    // 请求报错示例
     if (err.response.data.message) {
       console.error(err.response.data.message)
     }
 
-    // FEAT: 请求 401 示例
+    // 请求 401 示例
     if (err.response.status === 401) {
       router.push('/hello')
     }
