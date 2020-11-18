@@ -15,6 +15,10 @@ module.exports = (api, opts, rootOpts) => {
   api.extendPackage({
     devDependencies: {
       '@vue/test-utils': '^1.0.3',
+      // FEAT: 添加第三方插件
+      'clean-webpack-plugin': '^3.0.0',
+      'html-webpack-plugin': '^4.5.0', // FIXME: 默认已经安装过???
+      'copy-webpack-plugin': '^6.3.1',
     },
   })
 
