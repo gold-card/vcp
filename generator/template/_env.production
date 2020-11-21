@@ -1,4 +1,4 @@
 # 生产构建环境变量定义
-
+NODE_ENV = 'production'
 #
-VUE_APP_BASE_URL = http://
+VUE_APP_BASE_URL = 'http://production.com'

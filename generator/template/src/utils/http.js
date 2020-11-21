@@ -1,5 +1,5 @@
 import axios from 'axios'
-import router from '@/router'
+import router from '@router/index.js'
 
 const http = axios.create({
   baseURL: process.env.VUE_APP_BASE_URL || 'http://localhost:3000',

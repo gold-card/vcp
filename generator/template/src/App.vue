@@ -9,7 +9,7 @@
 </template>
 
 <style lang="less">
-@import url('../src/style/reset.css');
+@import url('./style/reset.less');
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

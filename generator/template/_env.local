@@ -1,4 +1,4 @@
 # 本地构建环境变量定义
+NODE_ENV = 'development'
 
-#
-VUE_APP_BASE_URL = http://
+VUE_APP_BASE_URL = 'http://local.com'
