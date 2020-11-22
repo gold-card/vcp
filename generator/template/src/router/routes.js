@@ -1,5 +1,6 @@
 import Hello from '@views/hello.vue'
-import World from '@views/world.vue'
+
+const World = () => import('@views/world.vue') // 懒加载
 
 export default [
   {

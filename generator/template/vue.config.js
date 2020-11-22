@@ -24,7 +24,6 @@ module.exports = {
 
   devServer: {
     open: true,
-    hot: true,
 
     // 添加代理
     // proxy: {
@@ -48,7 +47,7 @@ module.exports = {
   configureWebpack: () => {
     if (process.env.NODE_ENV === 'development') {
       plugins: [
-        // 效果等同于 cheap-module-cheap-souce-map
+        // 效果等同于 cheap-module-eval-souce-map
         new Webpack.EvalSourceMapDevToolPlugin({
           exclude: /node_modules/,
           module: true,
