@@ -10,7 +10,6 @@ const publicPath = '/' // 默认为 / 表示服务器根路径
 const Webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const path = require('path')
 const resolve = (dir) => path.resolve(__dirname, dir)
@@ -64,10 +63,6 @@ module.exports = {
           patterns: [
             { from: `${__dirname}/static`, to: `${__dirname}/dist`, toType: 'dir' },
           ],
-        }),
-        new HtmlWebpackPlugin({
-          title: 'vue cli preset for vue2.x@RenXusheng233',
-          template: './public/index.html',
         }),
       ]
     }

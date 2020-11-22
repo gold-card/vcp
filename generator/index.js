@@ -13,9 +13,6 @@ module.exports = (api, opts, rootOpts) => {
     devDependencies: {
       'clean-webpack-plugin': '^3.0.0',
       'copy-webpack-plugin': '^6.3.2',
-      'html-webpack-plugin': '^4.5.0',
-      'css-loader': '^5.0.1',
-      'style-loader': '^2.0.0',
     },
   })
 
