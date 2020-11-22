@@ -1,7 +1,12 @@
-import Hello from '@/views/hello.vue'
-import World from '@/views/world.vue'
+import Hello from '@views/hello.vue'
+
+const World = () => import('@views/world.vue') // 懒加载
 
 export default [
+  {
+    path: '/',
+    redirect: '/hello',
+  },
   {
     path: '/hello',
     name: 'hello',

@@ -1,18 +1,19 @@
 module.exports = (api, opts, rootOpts) => {
-  // npm命令
+  // npm 命令
   api.extendPackage({
     scripts: {
       serve: 'vue-cli-service serve',
       build: 'vue-cli-service build --silent',
       lint: 'vue-cli-service lint',
-      stage: 'vue-cli-service stage',
-      deploy: 'vue-cli-service deploy',
     },
   })
 
   // 开发依赖包
   api.extendPackage({
-    devDependencies: {},
+    devDependencies: {
+      'clean-webpack-plugin': '^3.0.0',
+      'copy-webpack-plugin': '^6.3.2',
+    },
   })
 
   // 项目依赖
@@ -26,7 +27,7 @@ module.exports = (api, opts, rootOpts) => {
     },
   })
 
-  // 安装echarts
+  // 安装 echarts
   if (opts.echarts) {
     api.extendPackage({
       dependencies: {
@@ -35,10 +36,17 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
-  // 删除 vue-cli3 默认目录src
+  // 删除 vue-cli3 默认目录 src
   api.render((files) => {
     Object.keys(files)
       .filter((path) => path.startsWith('src/'))
+      .forEach((path) => delete files[path])
+  })
+
+  // 删除 vue-cli3 默认目录 tests
+  api.render((files) => {
+    Object.keys(files)
+      .filter((path) => path.startsWith('tests/'))
       .forEach((path) => delete files[path])
   })
 

@@ -8,6 +8,7 @@
     "@vue/cli-plugin-eslint": {
       "config": "prettier",
       "lintOn": ["save", "commit"]
-    }
+    },
+    "@vue/cli-plugin-unit-jest": {}
   }
 }

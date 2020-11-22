@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Welcome from '@/components/welcome'
+import Welcome from '@components/welcome'
 export default {
   name: 'Hello',
   components: { Welcome },
