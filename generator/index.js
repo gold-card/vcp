@@ -12,7 +12,6 @@ module.exports = (api, opts, rootOpts) => {
   api.extendPackage({
     devDependencies: {
       'clean-webpack-plugin': '^3.0.0',
-      'copy-webpack-plugin': '^6.3.2',
     },
   })
 
