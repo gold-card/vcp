@@ -5,7 +5,7 @@ const outputDir = 'dist'
 // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
 const assetsDir = 'assets'
 // 针对前端单独部署时的情况，非部署到java容器中
-const publicPath = '/' // 默认为 / 表示服务器根路径
+const publicPath = './' // 默认为 / 表示服务器根路径
 
 const Webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -60,7 +60,10 @@ module.exports = {
         // 需要拷贝的目录或路径
         new CopyWebpackPlugin({
           patterns: [
-            { from: `${__dirname}/static`, to: `${__dirname}/dist`, toType: 'dir' },
+            {
+              from: path.resolve(__dirname, 'static'),
+              to: path.resolve(__dirname, 'dist', 'static'),
+            },
           ],
         }),
       ]
